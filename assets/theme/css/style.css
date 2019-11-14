@@ -12,6 +12,9 @@ body {
 section,
 .container,
 .container-fluid {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
   position: relative;
   word-wrap: break-word; }
 
@@ -1107,22 +1110,9 @@ body {
 	left: -2400px;
 }
 
-.mbr-gallery .mbr-gallery-item > div {
-  height: 450px !important;
-}
-
-.cid-rGjsz72FI7 .mbr-gallery-item > div::before {
-  height: 450px !important;
-}
-
 #gallery2-3 {
   background: linear-gradient(0deg, #13d6cc, #6c1ba1);
-}
-
-#carouselgallery .carousel-slide{
-  object-fit: cover !important;
-  width: 100%;
-  height: 100%; 
+  
 }
 
 .carousel-item img{
@@ -1135,27 +1125,48 @@ body {
 }
 
 .fixed-d2 {
-  height: 100px;
+  min-height: 100px;
 }
 
 #form4-5 {
   background: linear-gradient(0deg, #fa770b, #2ad4d4);
 }
 
+@media (max-width:768px) {
+  #gallery2-3 {
+    display: block;
+    max-height: 100%;
+  }
+}
 
 @media (max-width: 767px) {
   div > .pricing {
     height: auto !important;
   }
-}
-@media (max-width: 320px) {
-  #carouselgallery img{
+  #carouselgallery {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  #gallery2-3 img {
+    margin: 0 !important;
+    width: 100% !important;
+    height: auto !important;
     object-fit: cover !important;
-    height: 480px !important;
-    width: 320px !important;
+    max-height: 65vh !important;
+  }
+  #gallery2-3 {
+   height: 100vh !important;
   }
 }
 
+@media (max-width: 767px) {
+  div .afganki img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    
+  }
+}
 
 div .ServiceGroming {
   text-align: center;
@@ -1167,10 +1178,8 @@ div .ServiceGroming {
 div em {
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-right: 20px;
   font-weight: 300 !important;
   font-size: 20px !important;
-  text-align: center !important;
   color: #f4f4f4;
   
 }
@@ -1180,4 +1189,11 @@ div em {
   width: 150px;
   background-color: blueviolet;
   border-radius: 0 40px;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
