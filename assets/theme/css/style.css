@@ -1197,3 +1197,7 @@ div em {
   display: block;
   object-fit: cover;
 }
+
+div > .vip {
+  background-color: goldenrod !important;
+}
