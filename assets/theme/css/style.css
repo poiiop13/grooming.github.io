@@ -1201,3 +1201,11 @@ div em {
 div > .vip {
   background-color: goldenrod !important;
 }
+
+div > .dogs {
+  background-color: khaki !important;
+}
+
+div > .cats {
+  background-color: lightgoldenrodyellow !important;
+}
